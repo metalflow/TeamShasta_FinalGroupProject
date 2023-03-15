@@ -8,7 +8,11 @@ from keras.layers import Convolution2D, MaxPooling2D
 from keras.models import Sequential
 from matplotlib import pyplot as plt
 import numpy as np
+from tensorflow import keras
+from tensorflow.keras import layers
+from tensorflow.keras.layers.experimental import RandomFourierFeatures
 np.random.seed(123)  # for reproducibility
+
 
 #constants
 
@@ -58,11 +62,41 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 #begin training
-model.fit(x_train, y_train,batch_size=32, epochs=10, verbose=1)
+model.fit(x_train, y_train,batch_size=32, epochs=10, verbose=0)
 
-print("score")
-score = model.evaluate(x_test, y_test, verbose=1)
-print(score)
+print("CNN_score")
+CNN_score = model.evaluate(x_test, y_test, verbose=0)
+print(CNN_score)
 
 
 #clean up
+
+#begin SVM approximation
+#create the model
+model = keras.Sequential(
+    [
+        keras.Input(shape=(784,)),
+        RandomFourierFeatures(
+            output_dim=4096, scale=10.0, kernel_initializer="gaussian"
+        ),
+        layers.Dense(units=10),
+    ]
+)
+model.compile(
+    optimizer=keras.optimizers.Adam(learning_rate=1e-3),
+    loss=keras.losses.hinge,
+    metrics=[keras.metrics.CategoricalAccuracy(name="acc")],
+)
+#prepare the data
+#load dataset
+(x_train,y_train),(x_test,y_test)=fashion_mnist.load_data()
+# Preprocess the data by flattening & scaling it
+x_train = x_train.reshape(-1, 784).astype("float32") / 255
+x_test = x_test.reshape(-1, 784).astype("float32") / 255
+# Categorical (one hot) encoding of the labels
+y_train = keras.utils.to_categorical(y_train)
+y_test = keras.utils.to_categorical(y_test)
+model.fit(x_train, y_train, epochs=20, batch_size=128, validation_split=0.2)
+print("SVM_score")
+SVM_score = model.evaluate(x_test, y_test, verbose=0)
+print(SVM_score)
