@@ -96,7 +96,7 @@ x_test = x_test.reshape(-1, 784).astype("float32") / 255
 # Categorical (one hot) encoding of the labels
 y_train = keras.utils.to_categorical(y_train)
 y_test = keras.utils.to_categorical(y_test)
-model.fit(x_train, y_train, epochs=20, batch_size=128, validation_split=0.2)
+model.fit(x_train, y_train, epochs=20, batch_size=128, validation_split=0.2,verbose=0)
 print("SVM_score")
 SVM_score = model.evaluate(x_test, y_test, verbose=0)
 print(SVM_score)
