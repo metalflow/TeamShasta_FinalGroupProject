@@ -1,4 +1,5 @@
 #imports
+import time
 import tensorflow as tf
 from tensorflow import keras
 from keras.datasets import fashion_mnist
@@ -62,11 +63,14 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 #begin training
+tstart = time.time()
 model.fit(x_train, y_train,batch_size=32, epochs=10, verbose=0)
+tend = time.time()
 
 print("CNN_score")
 CNN_score = model.evaluate(x_test, y_test, verbose=0)
-print(CNN_score)
+print("test loss, test acc:",CNN_score)
+print("total time:",(tend-tstart))
 
 
 #clean up
@@ -96,7 +100,10 @@ x_test = x_test.reshape(-1, 784).astype("float32") / 255
 # Categorical (one hot) encoding of the labels
 y_train = keras.utils.to_categorical(y_train)
 y_test = keras.utils.to_categorical(y_test)
-model.fit(x_train, y_train, epochs=20, batch_size=128, validation_split=0.2,verbose=0)
+tstart = time.time()
+model.fit(x_train, y_train, epochs=10, batch_size=128, validation_split=0.2,verbose=0)
+tend = time.time()
 print("SVM_score")
 SVM_score = model.evaluate(x_test, y_test, verbose=0)
-print(SVM_score)
+print("test loss, test acc:",SVM_score)
+print("total time:",(tend-tstart))
