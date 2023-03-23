@@ -1,0 +1,294 @@
+numEpochs,CNN_loss,CNN_acc,CNN_time,SVM_loss,SVM_acc,SVM_time
+
+0,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+2023-03-22 22:25:20.077239: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-22 22:25:20.409945: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7427 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3080, pci bus id: 0000:01:00.0, compute capability: 8.6
+(None, 26, 26, 32)
+2023-03-22 22:25:20.709962: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+2023-03-22 22:25:21.342156: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8201
+2023-03-22 22:25:22.634779: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+[2.307007074356079, 0.12939999997615814]
+0.08087158203125
+[1.0679072141647339, 0.11749999970197678]
+0.05760335922241211
+
+
+5,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+(None, 26, 26, 32)
+[0.23240704834461212, 0.9171000123023987]
+11.60977554321289
+[0.08167808502912521, 0.847599983215332]
+2.299546718597412
+
+
+10,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+(None, 26, 26, 32)
+[0.2163265347480774, 0.9240999817848206]
+22.50909399986267
+[0.07202370464801788, 0.8680999875068665]
+4.451225757598877
+
+
+15,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+(None, 26, 26, 32)
+[0.2419155091047287, 0.9257000088691711]
+34.01504397392273
+[0.07681136578321457, 0.8629000186920166]
+6.604562759399414
+
+
+20,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+(None, 26, 26, 32)
+[0.24369394779205322, 0.9280999898910522]
+45.72082591056824
+[0.07265476882457733, 0.8712000250816345]
+8.451133966445923
+
+
+25,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+(None, 26, 26, 32)
+[0.26528239250183105, 0.9258999824523926]
+57.918081283569336
+[0.0740153044462204, 0.8665000200271606]
+12.314501762390137
+
+
+30,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+(None, 26, 26, 32)
+[0.24633759260177612, 0.9302999973297119]
+72.6371123790741
+[0.07697592675685883, 0.8697999715805054]
+13.365442752838135
+
+
+35,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+(None, 26, 26, 32)
+[0.28689730167388916, 0.9279000163078308]
+83.07864785194397
+[0.07203268259763718, 0.8698999881744385]
+15.815240144729614
+
+
+40,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+(None, 26, 26, 32)
+[0.2930801808834076, 0.9291999936103821]
+100.11201357841492
+[0.07034262269735336, 0.8776999711990356]
+18.84429097175598
+
+
+45,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+(None, 26, 26, 32)
+[0.2916068732738495, 0.929099977016449]
+103.87294316291809
+[0.07921722531318665, 0.8664000034332275]
+18.468311071395874
+
+
+50,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+(None, 26, 26, 32)
+[0.33878839015960693, 0.9236999750137329]
+111.185382604599
+[0.07370079308748245, 0.8725000023841858]
+21.30654215812683
+
+
+55,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+(None, 26, 26, 32)
+[0.3380351662635803, 0.9301000237464905]
+139.6305911540985
+[0.07195118069648743, 0.875]
+22.005063772201538
+
+
+60,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+(None, 26, 26, 32)
+[0.3097951114177704, 0.9316999912261963]
+138.31772303581238
+[0.07215383648872375, 0.8741000294685364]
+26.969362258911133
+
+
+65,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+(None, 26, 26, 32)
+[0.29564014077186584, 0.9347000122070312]
+159.04201674461365
+[0.07917250692844391, 0.8695999979972839]
+29.33080220222473
+
+
+70,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+(None, 26, 26, 32)
+[0.35938510298728943, 0.9297000169754028]
+170.5837481021881
+[0.07148949801921844, 0.8784999847412109]
+32.237295389175415
+
+
+75,
+x_train
+(60000, 28, 28)
+x_train reshape
+(60000, 28, 28, 1)
+y_train
+(60000,)
+first 10 items in y_train
+[9 0 0 3 0 2 7 2 5 5]
+y_train reshape
+(60000, 10)
+(None, 26, 26, 32)
+[0.3245699107646942, 0.9298999905586243]
+180.03838229179382
+[0.07406798750162125, 0.878000020980835]
+33.811166763305664
