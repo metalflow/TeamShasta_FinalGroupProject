@@ -7,12 +7,12 @@ from keras.utils import np_utils
 from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Convolution2D, MaxPooling2D
 from keras.models import Sequential
-from matplotlib import pyplot as plt
+#from matplotlib import pyplot as plt
 import numpy as np
 from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.layers.experimental import RandomFourierFeatures
-from sklearn import linear_model
+#from sklearn import linear_model
 np.random.seed(123)  # for reproducibility
 
 
@@ -29,14 +29,14 @@ for numEpochs in range(0,100,5):
     outputFile.write(str(numEpochs)+",")
     #load dataset
     (x_train,y_train),(x_test,y_test)=fashion_mnist.load_data()
-    print("x_train")
-    print(x_train.shape)
-    plt.imshow(x_train[0])
+    #print("x_train")
+    #print(x_train.shape)
+    #plt.imshow(x_train[0])
     #reshape the tensor to specify a single color channel (grayscale)
     print("x_train reshape")
     x_train = x_train.reshape(x_train.shape[0], 28, 28, 1)
     x_test = x_test.reshape(x_test.shape[0], 28, 28, 1)
-    print(x_train.shape)
+    #print(x_train.shape)
     #normalize values to floats between 0 and 1
     x_train = x_train.astype('float32')
     x_test = x_test.astype('float32')
@@ -74,8 +74,8 @@ for numEpochs in range(0,100,5):
 
     CNN_score = model.evaluate(x_test, y_test, verbose=0)
     #outputFile.write(str(CNN_score.get("loss"))+","+str(CNN_score.get("acc"))+","+str(tend-tstart))
-    outputFile.write(CNN_score)
-    outputFile.write((tend-tstart))
+    outputFile.write(str(CNN_score))
+    outputFile.write(str(tend-tstart))
     #print("test loss, test acc:",CNN_score)
     #print("total time:",(tend-tstart))
 
@@ -113,8 +113,8 @@ for numEpochs in range(0,100,5):
     #print("SVM_score")
     SVM_score = model.evaluate(x_test, y_test, verbose=0)
     #outputFile.write(str(CNN_score.get("loss"))+","+str(CNN_score.get("acc"))+","+str(tend-tstart))
-    outputFile.write(SVM_score)
-    outputFile.write((tend-tstart))
+    outputFile.write(str(SVM_score))
+    outputFile.write(str(tend-tstart))
     #print("test loss, test acc:",SVM_score)
     #print("total time:",(tend-tstart))
     outputFile.write("\n")
