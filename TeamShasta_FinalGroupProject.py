@@ -76,7 +76,6 @@ for numEpochs in range(0,100,5):
     #outputFile.write(str(CNN_score.get("loss"))+","+str(CNN_score.get("acc"))+","+str(tend-tstart))
     outputFile.write(CNN_score)
     outputFile.write((tend-tstart))
-    outputFile.write("\n")
     #print("test loss, test acc:",CNN_score)
     #print("total time:",(tend-tstart))
 
@@ -116,9 +115,9 @@ for numEpochs in range(0,100,5):
     #outputFile.write(str(CNN_score.get("loss"))+","+str(CNN_score.get("acc"))+","+str(tend-tstart))
     outputFile.write(SVM_score)
     outputFile.write((tend-tstart))
-    outputFile.write("\n")
     #print("test loss, test acc:",SVM_score)
     #print("total time:",(tend-tstart))
+    outputFile.write("\n")
 
 
 
